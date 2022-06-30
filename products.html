@@ -268,7 +268,6 @@
         </nav>
       </div>
     
-
       <main>
         <aside>
           <!-- Category -->
@@ -278,14 +277,13 @@
 
             </div>
             <div class="options hidden">
-
               <a href="laptops.html"><h6>Laptops</h6></a>
               <a href="mobile.html"><h6>Mobile</h6></a>
               <a href="Fashion.html"><h6>Fashion</h6></a>
             </div>
-
           </div>
         </aside>
+
         <!-- Featured Products -->
         <div id="featureProducts">
         <h1 class="title">Featured Products</h1>
@@ -393,12 +391,10 @@ menuDom.addEventListener("click",(e)=>{  //starts open animation
   optionDom.classList.toggle("hidden");//if hidden class is present on optionDom then remove it else add it 
 })
 
-
 // add eventListener to asideDom
 // shrinks the height of option dom which gives the closing animation when mouse leaves
-asideDom.addEventListener("mouseleave",()=>{ //starts close animatin
-  optionDom.classList.toggle("closeMenu");//if closeMenu is present on optionDom then remove if else add it
-
+asideDom.addEventListener("mouseleave",()=>{ //starts close animation
+optionDom.classList.toggle("closeMenu");//if closeMenu is present on optionDom then remove if else add it
 })
 
 /*
@@ -410,7 +406,6 @@ optionDom.addEventListener("animationend",(e)=>{
   optionDom.classList.add("hidden");// adds the class hidden to the option dom 
   optionDom.classList.remove("openMenu");//remove the class open menu from the div 
   optionDom.classList.remove("closeMenu");// remove the class close menu form the div .
-  
 })
   </script>
 </html>
