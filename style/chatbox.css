@@ -1,0 +1,28 @@
+#container {
+    position: relative;
+}
+
+#chat-root {
+    position: absolute;
+    width: 20%;
+    height: 45%;
+  bottom:0;
+    right: 3rem;
+    border-radius: 3rem;
+
+
+}
+
+.chat-display {
+    position: relative;
+    height: 90%;
+    background-color: #ddcfcf;
+    
+
+}
+
+.chat-input {
+    position: relative;
+    min-height: 10%;
+    background-color: #657584;
+}
