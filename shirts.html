@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Laptops</title>
+    <!-- For displaying icon from external source  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <style>
+      /* for displaying font from external source  */
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Poppins", sans-serif;
+      }
+      .navbar {
+        display: flex; /*It makes the container flexible*/
+        align-items: center;
+        max-height: 20vh;
+      }
+      nav {
+        flex: 1;
+        text-align: right;
+        align-self: flex-start;
+        padding-top: 2%;
+      }
+      nav ul {
+        display: inline-block;
+        list-style-type: none;
+      }
+      nav ul li {
+        display: inline-block;
+        margin-right: 20px;
+      }
+      a {
+        text-decoration: none;
+        color: black;
+        font-size: 22px;
+      }
+      a:hover {
+        color: red;
+      }
+      p {
+        color: black;
+      }
+      .container {
+        max-width: 100%;
+        min-height: 100vh;
+        margin: 0px 80px;
+        padding-left: 25px;
+        padding-right: 25px;
+      }
+     
+      h4 {
+       color: #555;
+       font-weight: normal;
+       
+      }
+
+      .title {
+        text-align: center;
+        margin: 0 auto 20px;
+        position: relative;
+        line-height: 60px;
+        color: #555;
+      }
+      /* To display line after 'Featured Shirts' Heading  */
+      .title::after {
+        content: "";
+        background: #ff523b;
+        width: 80px;
+        height: 5px;
+        border-radius: 5px;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      h2 {
+        color: rgb(65, 65, 65);
+      }
+      
+      .active {
+        border-bottom: 2px solid red;
+      }
+
+      #featureProducts ,.bottomRow,.topRow{
+        display: flex;
+      }
+
+      #featureProducts{
+        flex-direction: column;
+        width: 100%;
+      }
+
+      .topRow,.bottomRow{
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+      }
+
+      .bottomRow{
+        margin: 5% 0px;
+      }
+
+      .photo{
+        transition: transform 0.5s;
+        text-align: center;
+      }
+
+      .photo:hover{
+        transform: translateY(-5px);
+      }
+
+      button {
+        display:block;
+        background: #e4260d;
+        color: #fff;
+        padding: 8px 15px;
+        border-radius: 25px;
+        font-size: 15px;
+        margin-left: 65px;
+      }
+
+      .rating .fa{
+        color: red;
+      }
+
+      span{
+          font-size: 14px;
+      }
+      .active{
+      border-bottom: 2px solid red;
+    }
+      
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Navigation Bar -->
+      <div class="navbar">
+        <div class="logo">
+          <img src="images/megastore.png" alt="MegaStore Logo" width="125px" />
+        </div>
+        <nav>
+          <ul>
+            <li>
+              <a href="index.html"><i class="fa fa-home"></i>Home</a>
+            </li>
+            <li><a href="about.html">About us</a></li>
+            <li><a href="products.html" class="active">Products</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="account.html">Account</a></li>
+          </ul>
+        </nav>
+      </div>
+      <h1 class="title">Featured Shirts</h1>
+      <div class="topRow">
+        <!--Black Plain Shirt  -->
+  <div class="photo">
+    <img src="images/nyptrashirt.jpg" width="240px" height="250px">
+    <h4>Black Plain Shirt</h4>
+    <!-- Rating Star Icons -->
+    <div class="rating">
+      <span class="fa fa-star"></span>
+      <span class="fa fa-star"></span>
+      <span class="fa fa-star"></span>
+      <span class="fa fa-star"></span>
+      <span class="fa fa-star-o"></span>
+    </div>
+    <span>NPR 4000.00</span>
+    <button onclick="button()">Add to Cart</button>
+  </div>
+  <!-- Multicolored Shirt -->
+  <div class="photo">
+    <img src="images/multicolored.jpg" width="240px" height="250px">
+    <h4>Multicolored Shirt</h4>
+    <!-- Rating Star Icons -->
+    <div class="rating">
+      <span class="fa fa-star"></span>
+      <span class="fa fa-star"></span>
+      <span class="fa fa-star"></span>
+      <span class="fa fa-star"></span>
+      <span class="fa fa-star-half-o"></span>
+    </div>
+    <span>NPR 2500.00</span>
+    <button onclick="button()">Add to Cart</button>
+    <!-- Brand Shirt -->
+  </div>
+  <div class="photo">
+    <img src="images/brand-shirt.jpg" width="240px" height="250px">
+    <h4>Brand Shirt</h4>
+    <div class="rating">
+      <span class="fa fa-star"></span>
+      <span class="fa fa-star"></span>
+      <span class="fa fa-star"></span>
+      <span class="fa fa-star"></span>
+      <span class="fa fa-star-o"></span>
+    </div>
+    <span>NPR 2000.00</span>
+    <button onclick="button()">Add to Cart</button>
+  </div>
+</div>
+<div class="bottomRow">
+  <!-- Casual Shirt  -->
+  <div class="photo">
+    <img src="images/casual-shirt.jpg" width="240px" height="250px">
+    <h4>Casual Shirt</h4>
+    <div class="rating">
+      <span class="fa fa-star"></span>
+      <span class="fa fa-star"></span>
+      <span class="fa fa-star"></span>
+      <span class="fa fa-star-half-o"></span>
+      <span class="fa fa-star-o"></span>
+    </div>
+    <span>NPR 1200.00</span>
+    <button onclick="button()">Add to Cart</button>
+    
+  </div>
+  <!-- Blue Half Shirt -->
+  <div class="photo">
+    <img src="images/BlueHalfShirt.jpg" width="240px" height="250px">
+    <h4>Blue Half Shirt</h4>
+    <!-- Rating Star Icons -->
+    <div class="rating">
+      <span class="fa fa-star"></span>
+      <span class="fa fa-star"></span>
+      <span class="fa fa-star"></span>
+      <span class="fa fa-star"></span>
+      <span class="fa fa-star-o"></span>
+    </div>
+    <span>NPR 2500.00</span>
+    <button onclick="button()">Add to Cart</button>
+  </div>
+  <!-- Cream Shirt -->
+  <div class="photo">
+    <img src="images/CreamShirt.jpg" width="240px" height="250px">
+    <h4>Cream Shirt</h4>
+    <div class="rating">
+      <span class="fa fa-star"></span>
+      <span class="fa fa-star"></span>
+      <span class="fa fa-star"></span>
+      <span class="fa fa-star"></span>
+      <span class="fa fa-star-o"></span>
+    </div>
+    <span>NPR 2500.00</span>
+    <button onclick="button()">Add to Cart</button>
+  </div>
+  </div>
+  </body>
+
+  <script>
+    // To display message after clicking Add to Cart button
+    function button() {
+      alert("You have successfully added this item to the cart.");
+    }
+  </script>
+</html>
