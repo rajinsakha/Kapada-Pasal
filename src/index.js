@@ -7,11 +7,16 @@ const actions = [{
     triggers: ["info", "aafno baray"],
     response: "we are kapdapasal",
 },
-    {
+{
 
-        triggers: ["order", "i want to order",'saman kinnu xa'],
-        response: "what do you want to order",
-    }
+    triggers: ["order", "i want to order", 'saman kinnu xa'],
+    response: "what do you want to order",
+},
+{
+
+    triggers: ["bye"],
+    response: "Bye have a great day!!",
+},
 
 ]
 let messages = []
@@ -22,6 +27,7 @@ const chatDisplay = document.getElementsByClassName("chat-display")[0];
 
 
 sendEl.addEventListener("click", (e) => {
+
     const userMsg = createMessage(inputEl.value, 'user');
     update(userMsg);
     let response = "Not Programmed for that message";
@@ -48,12 +54,12 @@ const render = (messages) => {
         if (message.type === "user") {
             console.log(message.type)
 
-            container.textContent = `${message.text} user`;
+            container.textContent = `${message.text} :user`;
             chatDisplay.appendChild(container)
             container.style.textAlign = "right"
 
         } else {
-            container.textContent = `${message.text} bot`;
+            container.textContent = `${message.text} :bot`;
             chatDisplay.appendChild(container)
 
         }
