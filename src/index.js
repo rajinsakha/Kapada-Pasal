@@ -67,7 +67,7 @@ const render = (messages) => {
     return container;
 }
 
-const createMessage = (message, isBot) => {
+const createMessage = (message, isBot) => { 
     const messageObj = {
         text: message,
         type: isBot
