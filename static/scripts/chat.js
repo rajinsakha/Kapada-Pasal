@@ -35,7 +35,7 @@ function getTime() {
 
 // Gets the first message
 function firstBotMessage() {
-    let firstMessage = "Welcome to Kapada Pasal Website"
+    let firstMessage = "Welcome to Kapada Pasal Website!!!"
     document.getElementById("botStarterMessage").innerHTML = '<p class="botText"><span>' + firstMessage + '</span></p>';
 
     let time = getTime();
@@ -48,8 +48,17 @@ firstBotMessage();
 
 // Retrieves the response
 function getHardResponse(userText) {
+    let botHtml;
     let botResponse = getBotResponse(userText);
-    let botHtml = '<p class="botText"><span>' + botResponse + '</span></p>';
+    if(botResponse.type==="text"){
+
+        botHtml = '<p class="botText"><span>' + botResponse.text + '</span></p>';
+    }else{
+        botHtml = `<p class="botText" style="margin:0.2rem !important">
+        <span><img src=${botResponse.text} height="5%" width="50%"></p>
+        <p class="botText" style="margin:0.2rem !important"><span>${botResponse.price}</span></p>       
+        <p class="botText" style="margin:0.2rem !important"><span>${botResponse.info}</span></p>`;
+    }
     $("#chatbox").append(botHtml);
 
     document.getElementById("chat-bar-bottom").scrollIntoView(true);
