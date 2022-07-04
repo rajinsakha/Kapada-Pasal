@@ -1,6 +1,6 @@
 function getBotResponse(input) {
     //Products
-    if (input.toLowerCase() === "show me the latest product" || input.toLowerCase() === "show me the product" || input.toLowerCase() === "show the product" || input.toLowerCase() === "show the product") {
+    if (input.toLowerCase() === "show me the latest product" || input.toLowerCase() === "show me the product" || input.toLowerCase() === "show the product" || input.toLowerCase() === "show product") {
         const response={
             text:'../images/jordan.png',
             price:"Rs: 8000",
